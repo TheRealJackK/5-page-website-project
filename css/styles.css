@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+body > header {
+    display: flex;
+    justify-content: center;
+}
+
+body > header > h1 {
+    color: #0099ff;
+    font-size: 2.3rem;
+    border: 3px solid white;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+body > nav {
+    display: flex;
+    justify-content: center;
+}
+
+body > nav > a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 1em;
+    transition: 300ms ease;
+    color: rgba(31, 31, 31, 1);
+}
+
+body > nav > a:hover {
+    color: #0099ff;
+    transform: scale(1.2 , 1.2);
+}
+
+#showcase {
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/showcase-background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+#showcase > img {
+    padding: 5em;
+}
+
+.image-showcase {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+
+.image-showcase > div > img {
+    border: 4px solid sandybrown;
+    border-radius: 4px;
+    transition: ease-in-out 2s;
+    box-shadow: 0px 0px 10px 5px;
+    color: #074e7d;
+}
+
+.image-showcase > div > img:hover {
+    transform: scale(1.5, 1.5) rotateZ(360deg);
+}
+
+.image-showcase > div > h1 {
+    color: #0099ff;
+    text-align: center;
+    width: 10em;
+    font-size: 2rem;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 4px;
+    text-decoration: underline;
+}
+
+.image-showcase > div > h2 {
+    text-align: center;
+    color: rgba(31, 31, 31, 1);
+    width: 7em;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.image-showcase > div > p {
+    text-align: center;
+    color: rgba(31, 31, 31, 1);
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: #074e7d 0px 0px 10px 5px;
+}
+
+.image-showcase > div > ol {
+    width: 11.8em;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: #074e7d 0px 0px 10px 5px;
+}
+
+.image-showcase > div > ol > li {
+    color: rgba(31, 31, 31, 1);
+}
+
+.image-showcase > div > ol > dd {
+    color: rgba(31, 31, 31, 1);
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left;
+}
+
+.image-showcase > div > ol > h2 {
+    color: rgba(31, 31, 31, 1);
+}
+
+.image-showcase > div > input {
+    color: rgba(31, 31, 31, 1);
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    font-size: 2rem;
+    transition: 300ms ease;
+}
+
+.image-showcase > div > input:hover {
+    transform: scale(1.2 , 1.2);
+    color: #0099ff;
+    cursor: pointer;
+}
+
+body > main {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    background-color: white;
+    border-top: solid 4px sandybrown;
+    border-bottom: solid 4px sandybrown;
+    
+}
+
+.description h2 {
+    color: rgba(31, 31, 31, 1);
+    padding: 1em;
+    margin: auto;
+}
+
+.description p {
+    color: rgba(31, 31, 31, 1);
+    border-top: solid 4px sandybrown;
+    border-bottom: solid 4px sandybrown;
+    padding: 1em;
+    width: 50%;
+    margin: auto;
+}
+
+.description img {
+    margin: 3em;
+    height: 50%;
+    border: 4px solid sandybrown;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px;
+    color: #074e7d;
+}
+
+#second-showcase {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../images/second-showcase-background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+#second-showcase > img {
+    padding: 5em;
+}
+
+#second-showcase > #enquiry-form {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3em;
+}
+
+#second-showcase > #enquiry-form > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 1em;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: #074e7d 0px 0px 10px 5px;
+}
+
+#second-showcase > #enquiry-form > form > label {
+    padding-top: 1em;
+}
+
+#second-showcase > #enquiry-form > form > select {
+    margin: 0.3em;
+}
+
+#second-showcase > #enquiry-form > #submit-button {
+    color: rgba(31, 31, 31, 1);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    transition: 300ms ease;
+}
+
+#second-showcase > #enquiry-form > #submit-button:hover {
+    transform: scale(1.2 , 1.2);
+    color: #0099ff;
+    cursor: pointer;
+}
+
+#email-body { 
+    height: 10em;
+}
+
+footer {
+    border-top: solid 4px sandybrown;
+    border-bottom: solid 4px sandybrown;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer-info > h3 {
+    color: rgba(31, 31, 31, 1);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-info > p {
+    color: rgba(31, 31, 31, 1);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+}
+
+.icons a img {
+    width: 3em;
+    height: 3em;
+    padding: 10px;
+    transition: 300ms ease;
+}
+
+.icons a img:hover {
+    transform: scale(1.2 , 1.2);
+}
+
+/* #animate {
+    position: relative;
+    animation: rotate 300s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+        transition: none;
+      }
+      to {
+        transform: rotateY(720deg);
+        transition: none;
+      }
+} */
