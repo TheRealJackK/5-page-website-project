@@ -35,7 +35,7 @@ body > nav {
 body > nav > a {
     text-align: center;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin: 1em;
     transition: 300ms ease;
     color: rgba(31, 31, 31, 1);
@@ -124,8 +124,9 @@ body > nav > div {
 #second-showcase > #enquiry-form > form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 40%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 60%;
     padding: 1em;
     border: 2px solid white;
     border-radius: 4px;
@@ -146,6 +147,7 @@ body > nav > div {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
     transition: 300ms ease;
+    width: 40%;
 }
 
 #second-showcase > #enquiry-form > #submit-button:hover {
@@ -164,7 +166,7 @@ body > nav > div {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 2em;
+    /* padding: 2em; */
 }
 
 .image-showcase > div > img {
@@ -314,6 +316,25 @@ footer {
     justify-content: center;
 }
 
+footer > div {
+    display: flex;
+    justify-content: center;
+}
+
+footer > div > a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.5em;
+    transition: 300ms ease;
+    color: rgba(31, 31, 31, 1);
+}
+
+footer > div > a:hover {
+    color: #0099ff;
+    transform: scale(1.2 , 1.2);
+}
+
 .icons{
     display: flex;
     justify-content: center;
@@ -350,31 +371,39 @@ footer {
 
 /* Mobile */
 
-@media screen and (min-width: 400px) {
-
-    .image-showcase div {
-        padding: 2em;
-    }
-
-}
-
 @media screen and (max-width: 400px) {
-
     #showcase img {
         padding: 0;
         width: 40%;
     }
 
-    .hh {
-        font-size: 0.8rem;
+    .image-showcase h2 {
+        display: none;
     }
-
 }
 
-/*Tablet / Small Laptop */
+@media screen and (min-width: 400px) {
+    .image-showcase div {
+        padding: 2em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #showcase img {
+        padding: 0;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image-showcase h2 {
+        display: none;
+    }
+}
+
+/* Tablet / Small Laptop */
 
 @media screen and (max-width: 1024px) {
- 
     #showcase img {
         padding: 0;
         width: 60%;
@@ -384,6 +413,11 @@ footer {
         display: none;
     }
 
+    .image-showcase div {
+        flex-shrink: inherit;
+        padding: 2em;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -391,10 +425,6 @@ footer {
         display: none;
     }
 
-    .image-showcase div {
-        flex-shrink: inherit;
-        padding: 2em;
-    }
 }
 
 /* Larger Devices */
