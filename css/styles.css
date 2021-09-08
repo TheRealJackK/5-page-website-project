@@ -3,6 +3,13 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+body > main {
+    display: flex;
+    align-items: center;
+}
+
+/* Header */
+
 body > header {
     display: flex;
     justify-content: center;
@@ -11,11 +18,14 @@ body > header {
 body > header > h1 {
     color: #0099ff;
     font-size: 2.3rem;
+    text-align: center;
     border: 3px solid white;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 4px;
     padding: 0.5em;
 }
+
+/* Navigation */
 
 body > nav {
     display: flex;
@@ -36,6 +46,45 @@ body > nav > a:hover {
     transform: scale(1.2 , 1.2);
 }
 
+body > nav > div {
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger-links {
+    display: none;
+}
+
+.hamburger-links > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.5em;
+    color: rgba(31, 31, 31, 1);
+    transition: 300ms ease;
+    z-index: 99;
+}
+
+.hamburger-links > a:hover {
+    color: #0099ff;
+    transform: scale(1.2 , 1.2);
+}
+
+.hamburger-menu .hamburger-links {
+    transition: 300ms ease;
+}
+
+.hamburger-menu:hover .hamburger-links {
+    display: block;
+}
+
+/* First Background image with logo */
+
 #showcase {
     display: flex;
     justify-content: center;
@@ -49,9 +98,72 @@ body > nav > a:hover {
     padding: 5em;
 }
 
+/* Second Section Styling
+   also styling for enquiry page */
+
+   #second-showcase {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../images/second-showcase-background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+#second-showcase > img {
+    padding: 5em;
+}
+
+#second-showcase > #enquiry-form {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3em;
+}
+
+#second-showcase > #enquiry-form > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 1em;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: #074e7d 0px 0px 10px 5px;
+}
+
+#second-showcase > #enquiry-form > form > label {
+    padding-top: 1em;
+}
+
+#second-showcase > #enquiry-form > form > select {
+    margin: 0.3em;
+}
+
+#second-showcase > #enquiry-form > #submit-button {
+    color: rgba(31, 31, 31, 1);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    transition: 300ms ease;
+}
+
+#second-showcase > #enquiry-form > #submit-button:hover {
+    transform: scale(1.2 , 1.2);
+    color: #0099ff;
+    cursor: pointer;
+}
+
+#email-body { 
+    height: 10em;
+}
+
+/* Styling for images */
+
 .image-showcase {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 2em;
 }
 
@@ -138,10 +250,7 @@ body > nav > a:hover {
     cursor: pointer;
 }
 
-body > main {
-    display: flex;
-    align-items: center;
-}
+/* Description for images */
 
 .description {
     display: flex;
@@ -179,62 +288,7 @@ body > main {
     color: #074e7d;
 }
 
-#second-showcase {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-image: url(../images/second-showcase-background.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: repeat-x;
-}
-
-#second-showcase > img {
-    padding: 5em;
-}
-
-#second-showcase > #enquiry-form {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 3em;
-}
-
-#second-showcase > #enquiry-form > form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40%;
-    padding: 1em;
-    border: 2px solid white;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: #074e7d 0px 0px 10px 5px;
-}
-
-#second-showcase > #enquiry-form > form > label {
-    padding-top: 1em;
-}
-
-#second-showcase > #enquiry-form > form > select {
-    margin: 0.3em;
-}
-
-#second-showcase > #enquiry-form > #submit-button {
-    color: rgba(31, 31, 31, 1);
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    transition: 300ms ease;
-}
-
-#second-showcase > #enquiry-form > #submit-button:hover {
-    transform: scale(1.2 , 1.2);
-    color: #0099ff;
-    cursor: pointer;
-}
-
-#email-body { 
-    height: 10em;
-}
+/* footer styling */
 
 footer {
     border-top: solid 4px sandybrown;
@@ -276,9 +330,9 @@ footer {
     transform: scale(1.2 , 1.2);
 }
 
-/* #animate {
+/* #animate:hover {
     position: relative;
-    animation: rotate 300s infinite;
+    animation: rotate 3s infinite;
 }
 
 @keyframes rotate {
@@ -291,3 +345,66 @@ footer {
         transition: none;
       }
 } */
+
+/* Media Query */
+
+/* Mobile */
+
+@media screen and (min-width: 400px) {
+
+    .image-showcase div {
+        padding: 2em;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #showcase img {
+        padding: 0;
+        width: 40%;
+    }
+
+    .hh {
+        font-size: 0.8rem;
+    }
+
+}
+
+/*Tablet / Small Laptop */
+
+@media screen and (max-width: 1024px) {
+ 
+    #showcase img {
+        padding: 0;
+        width: 60%;
+    }
+
+    nav a {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    nav div {
+        display: none;
+    }
+
+    .image-showcase div {
+        flex-shrink: inherit;
+        padding: 2em;
+    }
+}
+
+/* Larger Devices */
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+    nav div {
+        display: none;
+    }
+}
