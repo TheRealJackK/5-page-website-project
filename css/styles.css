@@ -54,6 +54,11 @@ body > nav > ul > li > a:hover {
     color: #0099ff;
 }
 
+body > nav > ul > li > a:active {
+    border: 3px solid #0099ff;
+    border-radius: 4px;
+}
+
 body > nav > div {
     font-size: 4rem;
     cursor: pointer;
@@ -103,6 +108,7 @@ body > nav > div {
 
 .showcase > img {
     padding: 5em;
+    filter: opacity(90%);
 }
 
 /* Second Section Styling
@@ -141,6 +147,21 @@ body > nav > div {
     box-shadow: #074e7d 0px 0px 10px 5px;
 }
 
+.second-showcase > .enquiry-form > form > input:required {
+    border: 2px solid darkred;
+    border-radius: 2px;
+}
+
+#email-body {
+    height: 1em;
+    -moz-transition: height 500ms ease;
+    transition: height 500ms ease;
+}
+
+#email-body:focus { 
+    height: 10em;
+}
+
 .second-showcase > .enquiry-form > form > label {
     padding-top: 1em;
 }
@@ -161,10 +182,6 @@ body > nav > div {
     transform: scale(1.2 , 1.2);
     color: #0099ff;
     cursor: pointer;
-}
-
-#email-body { 
-    height: 10em;
 }
 
 /* Styling for images */
@@ -338,6 +355,11 @@ footer > div > a {
 
 footer > div > a:hover {
     color: #0099ff;
+}
+
+footer > div > a:active {
+    border: 2px solid #0099ff;
+    border-radius: 2px;
 }
 
 .icons{

@@ -29,3 +29,9 @@ fetch("../html/navbar.html")
     .then(data => {
         document.querySelector("nav").innerHTML = data;
     });
+
+//* Redirect for Price Page
+
+function redirect() {
+    window.location.href = "enquirypage.html"
+}
