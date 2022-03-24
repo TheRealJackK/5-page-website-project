@@ -2,7 +2,7 @@ console.log('JS Is Working!')
 
 //* Injecting Header w/ fetch
 
-fetch("../html/header.html")
+fetch("/html/header.html")
     .then(response =>{
         return response.text()
     })
@@ -12,7 +12,7 @@ fetch("../html/header.html")
 
 //* Injecting Footer w/ fetch
 
-fetch("../html/footer.html")
+fetch("/html/footer.html")
     .then(response =>{
         return response.text()
     })
@@ -22,7 +22,7 @@ fetch("../html/footer.html")
 
 //* Injecting Navbar w/ fetch
 
-fetch("../html/navbar.html")
+fetch("/html/navbar.html")
     .then(response =>{
         return response.text()
     })
